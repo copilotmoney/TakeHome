@@ -1,0 +1,23 @@
+type Query {
+  birds: [Bird!]!
+  bird(id: ID!): Bird
+}
+
+type Mutation {
+  addNote(birdId: ID!, comment: String!, timestamp: Int!): ID
+}
+
+type Bird {
+  id: ID!
+  thumb_url: String!
+  image_url: String!
+  latin_name: String!
+  english_name: String!
+  notes: [Note!]!
+}
+
+type Note {
+  id: ID!
+  comment: String!
+  timestamp: Int! # Milliseconds from epoch.
+}

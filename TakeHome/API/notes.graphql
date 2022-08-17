@@ -1,0 +1,3 @@
+mutation addNote($birdId: ID!, $comment: String!, $timestamp: Int!) {
+  addNote(birdId: $birdId, comment: $comment, timestamp: $timestamp)
+}

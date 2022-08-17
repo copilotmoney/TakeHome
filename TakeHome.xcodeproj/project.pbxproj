@@ -1,0 +1,473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2D09E6842CCAD67500F19817 /* Apollo in Frameworks */ = {isa = PBXBuildFile; productRef = 2D09E6832CCAD67500F19817 /* Apollo */; };
+		2D09E6872CCAD69C00F19817 /* schema.graphqls in Resources */ = {isa = PBXBuildFile; fileRef = 2D09E6862CCAD69800F19817 /* schema.graphqls */; };
+		2D09E6892CCAD87700F19817 /* birds.graphql in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E6882CCAD87200F19817 /* birds.graphql */; };
+		2D09E6962CCAD8E100F19817 /* SchemaMetadata.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E6942CCAD8E100F19817 /* SchemaMetadata.graphql.swift */; };
+		2D09E6972CCAD8E100F19817 /* SchemaConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E6932CCAD8E100F19817 /* SchemaConfiguration.swift */; };
+		2D09E6982CCAD8E100F19817 /* Query.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E6912CCAD8E100F19817 /* Query.graphql.swift */; };
+		2D09E6992CCAD8E100F19817 /* BirdsQuery.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E68B2CCAD8E100F19817 /* BirdsQuery.graphql.swift */; };
+		2D09E69A2CCAD8E100F19817 /* ID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E68E2CCAD8E100F19817 /* ID.swift */; };
+		2D09E69B2CCAD8E100F19817 /* Bird.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E6902CCAD8E100F19817 /* Bird.graphql.swift */; };
+		2D09E69C2CCAD8E100F19817 /* GraphQL.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E68A2CCAD8E100F19817 /* GraphQL.graphql.swift */; };
+		2D09E69E2CCAD95B00F19817 /* notes.graphql in Resources */ = {isa = PBXBuildFile; fileRef = 2D09E69D2CCAD95300F19817 /* notes.graphql */; };
+		2D09E6A12CCADA6B00F19817 /* AddNoteMutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E69F2CCADA6B00F19817 /* AddNoteMutation.graphql.swift */; };
+		2D09E6A32CCADAA800F19817 /* Mutation.graphql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E6A22CCADAA800F19817 /* Mutation.graphql.swift */; };
+		2D09E6A52CCADC3C00F19817 /* GraphQLClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D09E6A42CCADC3500F19817 /* GraphQLClient.swift */; };
+		2DB8FA1828AD40F900DF01CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */; };
+		2DB8FA1A28AD40F900DF01CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1928AD40F900DF01CC /* SceneDelegate.swift */; };
+		2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1B28AD40F900DF01CC /* ViewController.swift */; };
+		2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */; };
+		2DB8FA2428AD40FA00DF01CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2D09E6862CCAD69800F19817 /* schema.graphqls */ = {isa = PBXFileReference; lastKnownFileType = text; path = schema.graphqls; sourceTree = "<group>"; };
+		2D09E6882CCAD87200F19817 /* birds.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = birds.graphql; sourceTree = "<group>"; };
+		2D09E68A2CCAD8E100F19817 /* GraphQL.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQL.graphql.swift; sourceTree = "<group>"; };
+		2D09E68B2CCAD8E100F19817 /* BirdsQuery.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsQuery.graphql.swift; sourceTree = "<group>"; };
+		2D09E68E2CCAD8E100F19817 /* ID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ID.swift; sourceTree = "<group>"; };
+		2D09E6902CCAD8E100F19817 /* Bird.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.graphql.swift; sourceTree = "<group>"; };
+		2D09E6912CCAD8E100F19817 /* Query.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.graphql.swift; sourceTree = "<group>"; };
+		2D09E6932CCAD8E100F19817 /* SchemaConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaConfiguration.swift; sourceTree = "<group>"; };
+		2D09E6942CCAD8E100F19817 /* SchemaMetadata.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemaMetadata.graphql.swift; sourceTree = "<group>"; };
+		2D09E69D2CCAD95300F19817 /* notes.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = notes.graphql; sourceTree = "<group>"; };
+		2D09E69F2CCADA6B00F19817 /* AddNoteMutation.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteMutation.graphql.swift; sourceTree = "<group>"; };
+		2D09E6A22CCADAA800F19817 /* Mutation.graphql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mutation.graphql.swift; sourceTree = "<group>"; };
+		2D09E6A42CCADC3500F19817 /* GraphQLClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphQLClient.swift; sourceTree = "<group>"; };
+		2DB8FA1428AD40F900DF01CC /* TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2DB8FA1928AD40F900DF01CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2DB8FA1B28AD40F900DF01CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2DB8FA2328AD40FA00DF01CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2DB8FA2528AD40FA00DF01CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2DB8FA1128AD40F900DF01CC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2D09E6842CCAD67500F19817 /* Apollo in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2D09E6852CCAD69300F19817 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E6A42CCADC3500F19817 /* GraphQLClient.swift */,
+				2D09E68A2CCAD8E100F19817 /* GraphQL.graphql.swift */,
+				2D09E68D2CCAD8E100F19817 /* Operations */,
+				2D09E6952CCAD8E100F19817 /* Schema */,
+				2D09E6882CCAD87200F19817 /* birds.graphql */,
+				2D09E69D2CCAD95300F19817 /* notes.graphql */,
+				2D09E6862CCAD69800F19817 /* schema.graphqls */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		2D09E68C2CCAD8E100F19817 /* Queries */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E68B2CCAD8E100F19817 /* BirdsQuery.graphql.swift */,
+			);
+			path = Queries;
+			sourceTree = "<group>";
+		};
+		2D09E68D2CCAD8E100F19817 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E6A02CCADA6B00F19817 /* Mutations */,
+				2D09E68C2CCAD8E100F19817 /* Queries */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		2D09E68F2CCAD8E100F19817 /* CustomScalars */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E68E2CCAD8E100F19817 /* ID.swift */,
+			);
+			path = CustomScalars;
+			sourceTree = "<group>";
+		};
+		2D09E6922CCAD8E100F19817 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E6902CCAD8E100F19817 /* Bird.graphql.swift */,
+				2D09E6A22CCADAA800F19817 /* Mutation.graphql.swift */,
+				2D09E6912CCAD8E100F19817 /* Query.graphql.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		2D09E6952CCAD8E100F19817 /* Schema */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E68F2CCAD8E100F19817 /* CustomScalars */,
+				2D09E6922CCAD8E100F19817 /* Objects */,
+				2D09E6932CCAD8E100F19817 /* SchemaConfiguration.swift */,
+				2D09E6942CCAD8E100F19817 /* SchemaMetadata.graphql.swift */,
+			);
+			path = Schema;
+			sourceTree = "<group>";
+		};
+		2D09E6A02CCADA6B00F19817 /* Mutations */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E69F2CCADA6B00F19817 /* AddNoteMutation.graphql.swift */,
+			);
+			path = Mutations;
+			sourceTree = "<group>";
+		};
+		2DB8FA0B28AD40F900DF01CC = {
+			isa = PBXGroup;
+			children = (
+				2DB8FA1628AD40F900DF01CC /* TakeHome */,
+				2DB8FA1528AD40F900DF01CC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2DB8FA1528AD40F900DF01CC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2DB8FA1428AD40F900DF01CC /* TakeHome.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2DB8FA1628AD40F900DF01CC /* TakeHome */ = {
+			isa = PBXGroup;
+			children = (
+				2D09E6852CCAD69300F19817 /* API */,
+				2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */,
+				2DB8FA1928AD40F900DF01CC /* SceneDelegate.swift */,
+				2DB8FA1B28AD40F900DF01CC /* ViewController.swift */,
+				2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */,
+				2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */,
+				2DB8FA2528AD40FA00DF01CC /* Info.plist */,
+			);
+			path = TakeHome;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2DB8FA1328AD40F900DF01CC /* TakeHome */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2DB8FA2828AD40FA00DF01CC /* Build configuration list for PBXNativeTarget "TakeHome" */;
+			buildPhases = (
+				2DB8FA1028AD40F900DF01CC /* Sources */,
+				2DB8FA1128AD40F900DF01CC /* Frameworks */,
+				2DB8FA1228AD40F900DF01CC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TakeHome;
+			productName = TakeHome;
+			productReference = 2DB8FA1428AD40F900DF01CC /* TakeHome.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2DB8FA0C28AD40F900DF01CC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2DB8FA1328AD40F900DF01CC = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = 2DB8FA0F28AD40F900DF01CC /* Build configuration list for PBXProject "TakeHome" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2DB8FA0B28AD40F900DF01CC;
+			packageReferences = (
+				2D09E6822CCAD67500F19817 /* XCRemoteSwiftPackageReference "apollo-ios" */,
+			);
+			productRefGroup = 2DB8FA1528AD40F900DF01CC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2DB8FA1328AD40F900DF01CC /* TakeHome */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2DB8FA1228AD40F900DF01CC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB8FA2428AD40FA00DF01CC /* LaunchScreen.storyboard in Resources */,
+				2D09E6872CCAD69C00F19817 /* schema.graphqls in Resources */,
+				2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */,
+				2D09E69E2CCAD95B00F19817 /* notes.graphql in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2DB8FA1028AD40F900DF01CC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */,
+				2DB8FA1828AD40F900DF01CC /* AppDelegate.swift in Sources */,
+				2D09E6892CCAD87700F19817 /* birds.graphql in Sources */,
+				2D09E6962CCAD8E100F19817 /* SchemaMetadata.graphql.swift in Sources */,
+				2D09E6972CCAD8E100F19817 /* SchemaConfiguration.swift in Sources */,
+				2D09E6A12CCADA6B00F19817 /* AddNoteMutation.graphql.swift in Sources */,
+				2D09E6982CCAD8E100F19817 /* Query.graphql.swift in Sources */,
+				2D09E6992CCAD8E100F19817 /* BirdsQuery.graphql.swift in Sources */,
+				2D09E6A52CCADC3C00F19817 /* GraphQLClient.swift in Sources */,
+				2D09E69A2CCAD8E100F19817 /* ID.swift in Sources */,
+				2D09E69B2CCAD8E100F19817 /* Bird.graphql.swift in Sources */,
+				2D09E69C2CCAD8E100F19817 /* GraphQL.graphql.swift in Sources */,
+				2D09E6A32CCADAA800F19817 /* Mutation.graphql.swift in Sources */,
+				2DB8FA1A28AD40F900DF01CC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2DB8FA2328AD40FA00DF01CC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2DB8FA2628AD40FA00DF01CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2DB8FA2728AD40FA00DF01CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MARKETING_VERSION = 1.0;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2DB8FA2928AD40FA00DF01CC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeHome/Info.plist;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.copilot.TakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		2DB8FA2A28AD40FA00DF01CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TakeHome/Info.plist;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.copilot.TakeHome;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2DB8FA0F28AD40F900DF01CC /* Build configuration list for PBXProject "TakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB8FA2628AD40FA00DF01CC /* Debug */,
+				2DB8FA2728AD40FA00DF01CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2DB8FA2828AD40FA00DF01CC /* Build configuration list for PBXNativeTarget "TakeHome" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2DB8FA2928AD40FA00DF01CC /* Debug */,
+				2DB8FA2A28AD40FA00DF01CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2D09E6822CCAD67500F19817 /* XCRemoteSwiftPackageReference "apollo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apollographql/apollo-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.15.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2D09E6832CCAD67500F19817 /* Apollo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D09E6822CCAD67500F19817 /* XCRemoteSwiftPackageReference "apollo-ios" */;
+			productName = Apollo;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2DB8FA0C28AD40F900DF01CC /* Project object */;
+}
