@@ -72,6 +72,7 @@ class BirdCell: UICollectionViewCell {
                 return
             }
             
+            // Image 
             guard let image = UIImage(data: data), let jpegData = image.jpegData(compressionQuality: 1.0) else {
                 completion(.failure(NSError(domain: "Invalid Image", code: 0, userInfo: nil)))
                 return

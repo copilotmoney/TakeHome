@@ -26,8 +26,20 @@
 		CA5F25BD2C66D63E000DE626 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA5F25BC2C66D63E000DE626 /* GoogleService-Info.plist */; };
 		CA5F25BF2C66D6D6000DE626 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA5F25BE2C66D6D6000DE626 /* FirebaseAuth */; };
 		CA5F25C32C680B86000DE626 /* BirdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25C22C680B86000DE626 /* BirdDetailViewController.swift */; };
+		CA5F25D22C681B09000DE626 /* MainCoordinatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25D12C681B09000DE626 /* MainCoordinatorTests.swift */; };
+		CA5F25D42C681EBE000DE626 /* BirdsViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25D32C681EBE000DE626 /* BirdsViewModelTest.swift */; };
 		CAC5C4102C65B174005C0902 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC5C40E2C65B173005C0902 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CA5F25CC2C681AE5000DE626 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DB8FA0C28AD40F900DF01CC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DB8FA1328AD40F900DF01CC;
+			remoteInfo = TakeHome;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2DB8FA1428AD40F900DF01CC /* TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +60,9 @@
 		CA5F25B22C66CC9D000DE626 /* BirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCell.swift; sourceTree = "<group>"; };
 		CA5F25BC2C66D63E000DE626 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CA5F25C22C680B86000DE626 /* BirdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDetailViewController.swift; sourceTree = "<group>"; };
+		CA5F25C82C681AE5000DE626 /* TakeHomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakeHomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5F25D12C681B09000DE626 /* MainCoordinatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorTests.swift; sourceTree = "<group>"; };
+		CA5F25D32C681EBE000DE626 /* BirdsViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsViewModelTest.swift; sourceTree = "<group>"; };
 		CAC5C40E2C65B173005C0902 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,6 +77,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA5F25C52C681AE5000DE626 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -69,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB8FA1628AD40F900DF01CC /* TakeHome */,
+				CA5F25C92C681AE5000DE626 /* TakeHomeTests */,
 				2DB8FA1528AD40F900DF01CC /* Products */,
 				CA5F25B72C66CE0B000DE626 /* Frameworks */,
 			);
@@ -78,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB8FA1428AD40F900DF01CC /* TakeHome.app */,
+				CA5F25C82C681AE5000DE626 /* TakeHomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -186,6 +210,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		CA5F25C92C681AE5000DE626 /* TakeHomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25D12C681B09000DE626 /* MainCoordinatorTests.swift */,
+				CA5F25D32C681EBE000DE626 /* BirdsViewModelTest.swift */,
+			);
+			path = TakeHomeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -211,6 +244,24 @@
 			productReference = 2DB8FA1428AD40F900DF01CC /* TakeHome.app */;
 			productType = "com.apple.product-type.application";
 		};
+		CA5F25C72C681AE5000DE626 /* TakeHomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA5F25CE2C681AE5000DE626 /* Build configuration list for PBXNativeTarget "TakeHomeTests" */;
+			buildPhases = (
+				CA5F25C42C681AE5000DE626 /* Sources */,
+				CA5F25C52C681AE5000DE626 /* Frameworks */,
+				CA5F25C62C681AE5000DE626 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CA5F25CD2C681AE5000DE626 /* PBXTargetDependency */,
+			);
+			name = TakeHomeTests;
+			productName = TakeHomeTests;
+			productReference = CA5F25C82C681AE5000DE626 /* TakeHomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -218,11 +269,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1340;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					2DB8FA1328AD40F900DF01CC = {
 						CreatedOnToolsVersion = 13.4.1;
+					};
+					CA5F25C72C681AE5000DE626 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = 2DB8FA1328AD40F900DF01CC;
 					};
 				};
 			};
@@ -244,6 +299,7 @@
 			projectRoot = "";
 			targets = (
 				2DB8FA1328AD40F900DF01CC /* TakeHome */,
+				CA5F25C72C681AE5000DE626 /* TakeHomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -257,6 +313,13 @@
 				CA5F25BD2C66D63E000DE626 /* GoogleService-Info.plist in Resources */,
 				CA5F25A12C66C6FB000DE626 /* SheetViewController.xib in Resources */,
 				2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA5F25C62C681AE5000DE626 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +346,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CA5F25C42C681AE5000DE626 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA5F25D22C681B09000DE626 /* MainCoordinatorTests.swift in Sources */,
+				CA5F25D42C681EBE000DE626 /* BirdsViewModelTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CA5F25CD2C681AE5000DE626 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2DB8FA1328AD40F900DF01CC /* TakeHome */;
+			targetProxy = CA5F25CC2C681AE5000DE626 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */ = {
@@ -457,6 +537,59 @@
 			};
 			name = Release;
 		};
+		CA5F25CF2C681AE5000DE626 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96583FPNGW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jghg02.TakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakeHome";
+			};
+			name = Debug;
+		};
+		CA5F25D02C681AE5000DE626 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 96583FPNGW;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jghg02.TakeHomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TakeHome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TakeHome";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -474,6 +607,15 @@
 			buildConfigurations = (
 				2DB8FA2928AD40FA00DF01CC /* Debug */,
 				2DB8FA2A28AD40FA00DF01CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA5F25CE2C681AE5000DE626 /* Build configuration list for PBXNativeTarget "TakeHomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA5F25CF2C681AE5000DE626 /* Debug */,
+				CA5F25D02C681AE5000DE626 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
