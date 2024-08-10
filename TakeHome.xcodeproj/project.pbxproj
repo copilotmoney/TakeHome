@@ -8,20 +8,47 @@
 
 /* Begin PBXBuildFile section */
 		2DB8FA1828AD40F900DF01CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */; };
-		2DB8FA1A28AD40F900DF01CC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1928AD40F900DF01CC /* SceneDelegate.swift */; };
 		2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1B28AD40F900DF01CC /* ViewController.swift */; };
 		2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */; };
 		2DB8FA2428AD40FA00DF01CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */; };
+		CA5F259B2C66C5EC000DE626 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259A2C66C5EC000DE626 /* Coordinator.swift */; };
+		CA5F259D2C66C600000DE626 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259C2C66C600000DE626 /* MainCoordinator.swift */; };
+		CA5F25A02C66C6FB000DE626 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */; };
+		CA5F25A12C66C6FB000DE626 /* SheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5F259F2C66C6FB000DE626 /* SheetViewController.xib */; };
+		CA5F25A62C66CB92000DE626 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25A52C66CB92000DE626 /* Bird.swift */; };
+		CA5F25A82C66CBC2000DE626 /* BirdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25A72C66CBC2000DE626 /* BirdRepository.swift */; };
+		CA5F25AB2C66CBEE000DE626 /* FetchBirdsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25AA2C66CBEE000DE626 /* FetchBirdsUseCase.swift */; };
+		CA5F25AD2C66CC1C000DE626 /* FirebaseBirdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25AC2C66CC1C000DE626 /* FirebaseBirdRepository.swift */; };
+		CA5F25B02C66CC70000DE626 /* BirdsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25AF2C66CC70000DE626 /* BirdsViewModel.swift */; };
+		CA5F25B32C66CC9D000DE626 /* BirdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25B22C66CC9D000DE626 /* BirdCell.swift */; };
+		CA5F25B62C66CDA9000DE626 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CA5F25B52C66CDA9000DE626 /* SDWebImage */; };
+		CA5F25B92C66CE1E000DE626 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = CA5F25B82C66CE1E000DE626 /* FirebaseFirestore */; };
+		CA5F25BD2C66D63E000DE626 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA5F25BC2C66D63E000DE626 /* GoogleService-Info.plist */; };
+		CA5F25BF2C66D6D6000DE626 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = CA5F25BE2C66D6D6000DE626 /* FirebaseAuth */; };
+		CA5F25C32C680B86000DE626 /* BirdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25C22C680B86000DE626 /* BirdDetailViewController.swift */; };
+		CAC5C4102C65B174005C0902 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC5C40E2C65B173005C0902 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2DB8FA1428AD40F900DF01CC /* TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DB8FA1928AD40F900DF01CC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2DB8FA1B28AD40F900DF01CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DB8FA2328AD40FA00DF01CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DB8FA2528AD40FA00DF01CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA5F259A2C66C5EC000DE626 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CA5F259C2C66C600000DE626 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		CA5F259F2C66C6FB000DE626 /* SheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SheetViewController.xib; sourceTree = "<group>"; };
+		CA5F25A52C66CB92000DE626 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		CA5F25A72C66CBC2000DE626 /* BirdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRepository.swift; sourceTree = "<group>"; };
+		CA5F25AA2C66CBEE000DE626 /* FetchBirdsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBirdsUseCase.swift; sourceTree = "<group>"; };
+		CA5F25AC2C66CC1C000DE626 /* FirebaseBirdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseBirdRepository.swift; sourceTree = "<group>"; };
+		CA5F25AF2C66CC70000DE626 /* BirdsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdsViewModel.swift; sourceTree = "<group>"; };
+		CA5F25B22C66CC9D000DE626 /* BirdCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdCell.swift; sourceTree = "<group>"; };
+		CA5F25BC2C66D63E000DE626 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CA5F25C22C680B86000DE626 /* BirdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdDetailViewController.swift; sourceTree = "<group>"; };
+		CAC5C40E2C65B173005C0902 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5F25B62C66CDA9000DE626 /* SDWebImage in Frameworks */,
+				CA5F25B92C66CE1E000DE626 /* FirebaseFirestore in Frameworks */,
+				CA5F25BF2C66D6D6000DE626 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +70,7 @@
 			children = (
 				2DB8FA1628AD40F900DF01CC /* TakeHome */,
 				2DB8FA1528AD40F900DF01CC /* Products */,
+				CA5F25B72C66CE0B000DE626 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +85,105 @@
 		2DB8FA1628AD40F900DF01CC /* TakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				CA5F25BC2C66D63E000DE626 /* GoogleService-Info.plist */,
+				CA5F25A42C66CB4B000DE626 /* Model */,
+				CA5F25A22C66CB30000DE626 /* Birds */,
+				CA5F25992C66C5DC000DE626 /* Coordinator */,
 				2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */,
-				2DB8FA1928AD40F900DF01CC /* SceneDelegate.swift */,
 				2DB8FA1B28AD40F900DF01CC /* ViewController.swift */,
 				2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */,
 				2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */,
 				2DB8FA2528AD40FA00DF01CC /* Info.plist */,
+				CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */,
+				CA5F259F2C66C6FB000DE626 /* SheetViewController.xib */,
 			);
 			path = TakeHome;
+			sourceTree = "<group>";
+		};
+		CA5F25992C66C5DC000DE626 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F259A2C66C5EC000DE626 /* Coordinator.swift */,
+				CA5F259C2C66C600000DE626 /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		CA5F25A22C66CB30000DE626 /* Birds */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25B12C66CC96000DE626 /* View */,
+				CA5F25AE2C66CC60000DE626 /* ViewModel */,
+				CA5F25A92C66CBD9000DE626 /* UseCase */,
+				CA5F25A32C66CB43000DE626 /* Repository */,
+			);
+			path = Birds;
+			sourceTree = "<group>";
+		};
+		CA5F25A32C66CB43000DE626 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25A72C66CBC2000DE626 /* BirdRepository.swift */,
+				CA5F25AC2C66CC1C000DE626 /* FirebaseBirdRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		CA5F25A42C66CB4B000DE626 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25A52C66CB92000DE626 /* Bird.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CA5F25A92C66CBD9000DE626 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25AA2C66CBEE000DE626 /* FetchBirdsUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		CA5F25AE2C66CC60000DE626 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25AF2C66CC70000DE626 /* BirdsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA5F25B12C66CC96000DE626 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25C12C680B72000DE626 /* List */,
+				CA5F25C02C680B53000DE626 /* Detail */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CA5F25B72C66CE0B000DE626 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA5F25C02C680B53000DE626 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F25C22C680B86000DE626 /* BirdDetailViewController.swift */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		CA5F25C12C680B72000DE626 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				CAC5C40E2C65B173005C0902 /* MainViewController.swift */,
+				CA5F25B22C66CC9D000DE626 /* BirdCell.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -80,6 +202,11 @@
 			dependencies = (
 			);
 			name = TakeHome;
+			packageProductDependencies = (
+				CA5F25B52C66CDA9000DE626 /* SDWebImage */,
+				CA5F25B82C66CE1E000DE626 /* FirebaseFirestore */,
+				CA5F25BE2C66D6D6000DE626 /* FirebaseAuth */,
+			);
 			productName = TakeHome;
 			productReference = 2DB8FA1428AD40F900DF01CC /* TakeHome.app */;
 			productType = "com.apple.product-type.application";
@@ -108,6 +235,10 @@
 				Base,
 			);
 			mainGroup = 2DB8FA0B28AD40F900DF01CC;
+			packageReferences = (
+				CAC5C4122C65B4C6005C0902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				CA5F25B42C66CDA9000DE626 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 2DB8FA1528AD40F900DF01CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -123,6 +254,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DB8FA2428AD40FA00DF01CC /* LaunchScreen.storyboard in Resources */,
+				CA5F25BD2C66D63E000DE626 /* GoogleService-Info.plist in Resources */,
+				CA5F25A12C66C6FB000DE626 /* SheetViewController.xib in Resources */,
 				2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,9 +267,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA5F25C32C680B86000DE626 /* BirdDetailViewController.swift in Sources */,
+				CA5F25A82C66CBC2000DE626 /* BirdRepository.swift in Sources */,
+				CA5F25A02C66C6FB000DE626 /* SheetViewController.swift in Sources */,
+				CA5F25A62C66CB92000DE626 /* Bird.swift in Sources */,
+				CA5F25AD2C66CC1C000DE626 /* FirebaseBirdRepository.swift in Sources */,
+				CA5F259B2C66C5EC000DE626 /* Coordinator.swift in Sources */,
+				CA5F25B02C66CC70000DE626 /* BirdsViewModel.swift in Sources */,
+				CAC5C4102C65B174005C0902 /* MainViewController.swift in Sources */,
 				2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */,
+				CA5F25AB2C66CBEE000DE626 /* FetchBirdsUseCase.swift in Sources */,
+				CA5F259D2C66C600000DE626 /* MainCoordinator.swift in Sources */,
+				CA5F25B32C66CC9D000DE626 /* BirdCell.swift in Sources */,
 				2DB8FA1828AD40F900DF01CC /* AppDelegate.swift in Sources */,
-				2DB8FA1A28AD40F900DF01CC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +424,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.copilot.TakeHome;
+				PRODUCT_BUNDLE_IDENTIFIER = com.copilot.takehome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -304,7 +447,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.copilot.TakeHome;
+				PRODUCT_BUNDLE_IDENTIFIER = com.copilot.takehome;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -336,6 +479,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CA5F25B42C66CDA9000DE626 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.6;
+			};
+		};
+		CAC5C4122C65B4C6005C0902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CA5F25B52C66CDA9000DE626 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CA5F25B42C66CDA9000DE626 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		CA5F25B82C66CE1E000DE626 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAC5C4122C65B4C6005C0902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		CA5F25BE2C66D6D6000DE626 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CAC5C4122C65B4C6005C0902 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2DB8FA0C28AD40F900DF01CC /* Project object */;
 }
