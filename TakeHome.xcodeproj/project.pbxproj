@@ -11,6 +11,8 @@
 		2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1B28AD40F900DF01CC /* ViewController.swift */; };
 		2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */; };
 		2DB8FA2428AD40FA00DF01CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */; };
+		CA002AAB2C6843B700B26949 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA002AAA2C6843B700B26949 /* EmptyStateView.swift */; };
+		CA002AAD2C6846C300B26949 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA002AAC2C6846C300B26949 /* Note.swift */; };
 		CA5F259B2C66C5EC000DE626 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259A2C66C5EC000DE626 /* Coordinator.swift */; };
 		CA5F259D2C66C600000DE626 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259C2C66C600000DE626 /* MainCoordinator.swift */; };
 		CA5F25A02C66C6FB000DE626 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */; };
@@ -48,6 +50,8 @@
 		2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DB8FA2328AD40FA00DF01CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DB8FA2528AD40FA00DF01CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA002AAA2C6843B700B26949 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
+		CA002AAC2C6846C300B26949 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CA5F259A2C66C5EC000DE626 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CA5F259C2C66C600000DE626 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +128,14 @@
 			path = TakeHome;
 			sourceTree = "<group>";
 		};
+		CA002AA92C6843A700B26949 /* Empty */ = {
+			isa = PBXGroup;
+			children = (
+				CA002AAA2C6843B700B26949 /* EmptyStateView.swift */,
+			);
+			path = Empty;
+			sourceTree = "<group>";
+		};
 		CA5F25992C66C5DC000DE626 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				CA5F25A52C66CB92000DE626 /* Bird.swift */,
+				CA002AAC2C6846C300B26949 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +193,7 @@
 		CA5F25B12C66CC96000DE626 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CA002AA92C6843A700B26949 /* Empty */,
 				CA5F25C12C680B72000DE626 /* List */,
 				CA5F25C02C680B53000DE626 /* Detail */,
 			);
@@ -335,7 +349,9 @@
 				CA5F25A02C66C6FB000DE626 /* SheetViewController.swift in Sources */,
 				CA5F25A62C66CB92000DE626 /* Bird.swift in Sources */,
 				CA5F25AD2C66CC1C000DE626 /* FirebaseBirdRepository.swift in Sources */,
+				CA002AAD2C6846C300B26949 /* Note.swift in Sources */,
 				CA5F259B2C66C5EC000DE626 /* Coordinator.swift in Sources */,
+				CA002AAB2C6843B700B26949 /* EmptyStateView.swift in Sources */,
 				CA5F25B02C66CC70000DE626 /* BirdsViewModel.swift in Sources */,
 				CAC5C4102C65B174005C0902 /* MainViewController.swift in Sources */,
 				2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */,

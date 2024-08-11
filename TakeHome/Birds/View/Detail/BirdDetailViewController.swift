@@ -168,6 +168,7 @@ class BirdDetailViewController: UIViewController {
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension BirdDetailViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return notes.count
     }
@@ -177,9 +178,14 @@ extension BirdDetailViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel?.text = notes[indexPath.row]
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
-        cell.backgroundColor = UIColor(white: 0.95, alpha: 1)
+        cell.backgroundColor = UIColor(white: 0.94, alpha: 1)
         cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
 }

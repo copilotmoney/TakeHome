@@ -28,6 +28,13 @@ class MainViewController: UIViewController {
         return indicator
     }()
     
+    // Empty state view
+    private let emptyStateView: EmptyStateView = {
+        let view = EmptyStateView()
+        view.isHidden = true
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -35,6 +42,7 @@ class MainViewController: UIViewController {
         setupSearchController()
         setupCollectionView()
         setupLoadingIndicator()
+        setupEmptyStateView()
         bindViewModel()
         
         // Load the birds data with loading indicator
@@ -49,6 +57,21 @@ class MainViewController: UIViewController {
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
+    }
+    
+    private func setupEmptyStateView() {
+        view.addSubview(emptyStateView)
+        emptyStateView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            emptyStateView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            emptyStateView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            emptyStateView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            emptyStateView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
+        ])
+        
+        emptyStateView.onRetry = { [weak self] in
+            self?.loadData()
+        }
     }
     
     private func setupCollectionView() {
@@ -82,9 +105,19 @@ class MainViewController: UIViewController {
         viewModel.$birds
             .receive(on: DispatchQueue.main)
             .sink { [weak self] birds in
-                self?.loadingIndicator.stopAnimating()
-                self?.filteredBirds = birds
-                self?.collectionView.reloadData()
+                guard let self = self else { return }
+                if birds.isEmpty && self.viewModel.error == nil {
+                    // This means we're still loading or haven't fetched data yet, don't show the empty state
+                    return
+                }
+                self.loadingIndicator.stopAnimating()
+                if birds.isEmpty {
+                    self.showEmptyState()
+                } else {
+                    self.filteredBirds = birds
+                    self.collectionView.reloadData()
+                    self.showContent()
+                }
             }
             .store(in: &cancellables)
         
@@ -94,7 +127,7 @@ class MainViewController: UIViewController {
                 if let error = error {
                     self?.loadingIndicator.stopAnimating()
                     print("Error: \(error)")
-                    // Optionally, show an alert or error message to the user
+                    self?.showEmptyState()
                 }
             }
             .store(in: &cancellables)
@@ -104,8 +137,22 @@ class MainViewController: UIViewController {
         // Start loading indicator
         loadingIndicator.startAnimating()
         
+        // Hide content and empty view
+        collectionView.isHidden = true
+        emptyStateView.isHidden = true
+        
         // Load the birds data
         viewModel.loadBirds()
+    }
+    
+    private func showEmptyState() {
+        emptyStateView.isHidden = false
+        collectionView.isHidden = true
+    }
+    
+    private func showContent() {
+        emptyStateView.isHidden = true
+        collectionView.isHidden = false
     }
 }
 
