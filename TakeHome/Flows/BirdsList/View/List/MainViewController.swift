@@ -35,6 +35,17 @@ class MainViewController: UIViewController {
         return view
     }()
     
+    // No results label
+    private let noResultsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "No matching birds found."
+        label.font = .systemFont(ofSize: 18, weight: .medium)
+        label.textColor = .gray
+        label.textAlignment = .center
+        label.isHidden = true // Initially hidden
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -43,6 +54,7 @@ class MainViewController: UIViewController {
         setupCollectionView()
         setupLoadingIndicator()
         setupEmptyStateView()
+        setupNoResultsLabel()
         bindViewModel()
         
         // Load the birds data with loading indicator
@@ -98,6 +110,18 @@ class MainViewController: UIViewController {
         NSLayoutConstraint.activate([
             loadingIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loadingIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+    
+    private func setupNoResultsLabel() {
+        view.addSubview(noResultsLabel)
+        noResultsLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            noResultsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            noResultsLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            noResultsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            noResultsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20)
         ])
     }
     
@@ -185,6 +209,7 @@ extension MainViewController: UISearchResultsUpdating {
         guard let searchText = searchController.searchBar.text?.lowercased() else {
             filteredBirds = viewModel.birds
             collectionView.reloadData()
+            noResultsLabel.isHidden = !filteredBirds.isEmpty
             return
         }
         
@@ -197,5 +222,6 @@ extension MainViewController: UISearchResultsUpdating {
         }
         
         collectionView.reloadData()
+        noResultsLabel.isHidden = !filteredBirds.isEmpty
     }
 }

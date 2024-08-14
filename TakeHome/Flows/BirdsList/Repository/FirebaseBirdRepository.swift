@@ -10,7 +10,7 @@ import FirebaseFirestore
 
 class FirebaseBirdRepository: BirdRepository {
     private let firestore = Firestore.firestore()
-
+    
     func fetchBirds(completion: @escaping (Result<[Bird], Error>) -> Void) {
         // First, sign in anonymously
         Auth.auth().signInAnonymously { [weak self] authResult, error in
@@ -46,15 +46,50 @@ class FirebaseBirdRepository: BirdRepository {
                           let sortIndex = data["sort"] as? Int else {
                         return nil
                     }
+                    
+                    // Handle the notes field, defaulting to an empty array if it's nil
+                    let notesData = data["notes"] as? [[String: Any]] ?? []
+                    
+                    let notes = notesData.compactMap { noteData -> Note? in
+                        guard let userID = noteData["user_id"] as? String,
+                              let content = noteData["content"] as? String,
+                              let timestamp = noteData["timestamp"] as? TimeInterval else {
+                            return nil
+                        }
+                        return Note(userID: userID, content: content, timestamp: timestamp)
+                    }
+                    
                     return Bird(id: uid,
                                 nameSpanish: nameSpanish,
                                 nameEnglish: nameEnglish,
                                 nameLatin: nameLatin,
                                 thumbImageUrl: thumbImageUrl,
                                 fullImageUrl: fullImageUrl,
-                                sortIndex: sortIndex)
+                                sortIndex: sortIndex,
+                                notes: notes)
                 }
                 completion(.success(birds))
+            }
+        }
+    }
+    
+    func addNoteToBird(birdID: String, note: Note, completion: @escaping (Result<Void, Error>) -> Void) {
+        let birdDocRef = firestore.collection("birds").document(birdID)
+        
+        // Convert the note to a dictionary format that Firestore can accept
+        let noteData: [String: Any] = [
+            "user_id": note.userID,
+            "content": note.content,
+            "timestamp": note.timestamp
+        ]
+        
+        birdDocRef.updateData([
+            "notes": FieldValue.arrayUnion([noteData])
+        ]) { error in
+            if let error = error {
+                completion(.failure(error))
+            } else {
+                completion(.success(()))
             }
         }
     }

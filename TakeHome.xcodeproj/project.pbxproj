@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2DB8FA1828AD40F900DF01CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */; };
-		2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB8FA1B28AD40F900DF01CC /* ViewController.swift */; };
 		2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */; };
 		2DB8FA2428AD40FA00DF01CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */; };
 		CA002AAB2C6843B700B26949 /* EmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA002AAA2C6843B700B26949 /* EmptyStateView.swift */; };
 		CA002AAD2C6846C300B26949 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA002AAC2C6846C300B26949 /* Note.swift */; };
+		CA1566A02C6C14E90040C866 /* AddNoteUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA15669F2C6C14E90040C866 /* AddNoteUseCase.swift */; };
+		CA1566A32C6C1A110040C866 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1566A22C6C1A110040C866 /* NoteViewModel.swift */; };
+		CA1566A62C6C31770040C866 /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1566A52C6C31770040C866 /* NoteRepository.swift */; };
 		CA5F259B2C66C5EC000DE626 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259A2C66C5EC000DE626 /* Coordinator.swift */; };
 		CA5F259D2C66C600000DE626 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259C2C66C600000DE626 /* MainCoordinator.swift */; };
-		CA5F25A02C66C6FB000DE626 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */; };
-		CA5F25A12C66C6FB000DE626 /* SheetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA5F259F2C66C6FB000DE626 /* SheetViewController.xib */; };
 		CA5F25A62C66CB92000DE626 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25A52C66CB92000DE626 /* Bird.swift */; };
 		CA5F25A82C66CBC2000DE626 /* BirdRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25A72C66CBC2000DE626 /* BirdRepository.swift */; };
 		CA5F25AB2C66CBEE000DE626 /* FetchBirdsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F25AA2C66CBEE000DE626 /* FetchBirdsUseCase.swift */; };
@@ -46,16 +46,16 @@
 /* Begin PBXFileReference section */
 		2DB8FA1428AD40F900DF01CC /* TakeHome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakeHome.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2DB8FA1B28AD40F900DF01CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DB8FA2328AD40FA00DF01CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DB8FA2528AD40FA00DF01CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA002AAA2C6843B700B26949 /* EmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyStateView.swift; sourceTree = "<group>"; };
 		CA002AAC2C6846C300B26949 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		CA15669F2C6C14E90040C866 /* AddNoteUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteUseCase.swift; sourceTree = "<group>"; };
+		CA1566A22C6C1A110040C866 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
+		CA1566A52C6C31770040C866 /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		CA5F259A2C66C5EC000DE626 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CA5F259C2C66C600000DE626 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
-		CA5F259F2C66C6FB000DE626 /* SheetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SheetViewController.xib; sourceTree = "<group>"; };
 		CA5F25A52C66CB92000DE626 /* Bird.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
 		CA5F25A72C66CBC2000DE626 /* BirdRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirdRepository.swift; sourceTree = "<group>"; };
 		CA5F25AA2C66CBEE000DE626 /* FetchBirdsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchBirdsUseCase.swift; sourceTree = "<group>"; };
@@ -113,17 +113,14 @@
 		2DB8FA1628AD40F900DF01CC /* TakeHome */ = {
 			isa = PBXGroup;
 			children = (
+				CA15669C2C6C14560040C866 /* Flows */,
 				CA5F25BC2C66D63E000DE626 /* GoogleService-Info.plist */,
 				CA5F25A42C66CB4B000DE626 /* Model */,
-				CA5F25A22C66CB30000DE626 /* Birds */,
 				CA5F25992C66C5DC000DE626 /* Coordinator */,
 				2DB8FA1728AD40F900DF01CC /* AppDelegate.swift */,
-				2DB8FA1B28AD40F900DF01CC /* ViewController.swift */,
 				2DB8FA2028AD40FA00DF01CC /* Assets.xcassets */,
 				2DB8FA2228AD40FA00DF01CC /* LaunchScreen.storyboard */,
 				2DB8FA2528AD40FA00DF01CC /* Info.plist */,
-				CA5F259E2C66C6FB000DE626 /* SheetViewController.swift */,
-				CA5F259F2C66C6FB000DE626 /* SheetViewController.xib */,
 			);
 			path = TakeHome;
 			sourceTree = "<group>";
@@ -136,6 +133,49 @@
 			path = Empty;
 			sourceTree = "<group>";
 		};
+		CA15669C2C6C14560040C866 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				CA15669D2C6C14710040C866 /* AddNote */,
+				CA5F25A22C66CB30000DE626 /* BirdsList */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		CA15669D2C6C14710040C866 /* AddNote */ = {
+			isa = PBXGroup;
+			children = (
+				CA1566A42C6C31690040C866 /* Repository */,
+				CA1566A12C6C1A010040C866 /* ViewModel */,
+				CA15669E2C6C14D90040C866 /* UseCase */,
+			);
+			path = AddNote;
+			sourceTree = "<group>";
+		};
+		CA15669E2C6C14D90040C866 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				CA15669F2C6C14E90040C866 /* AddNoteUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		CA1566A12C6C1A010040C866 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CA1566A22C6C1A110040C866 /* NoteViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CA1566A42C6C31690040C866 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				CA1566A52C6C31770040C866 /* NoteRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		CA5F25992C66C5DC000DE626 /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,7 +185,7 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		CA5F25A22C66CB30000DE626 /* Birds */ = {
+		CA5F25A22C66CB30000DE626 /* BirdsList */ = {
 			isa = PBXGroup;
 			children = (
 				CA5F25B12C66CC96000DE626 /* View */,
@@ -153,7 +193,7 @@
 				CA5F25A92C66CBD9000DE626 /* UseCase */,
 				CA5F25A32C66CB43000DE626 /* Repository */,
 			);
-			path = Birds;
+			path = BirdsList;
 			sourceTree = "<group>";
 		};
 		CA5F25A32C66CB43000DE626 /* Repository */ = {
@@ -325,7 +365,6 @@
 			files = (
 				2DB8FA2428AD40FA00DF01CC /* LaunchScreen.storyboard in Resources */,
 				CA5F25BD2C66D63E000DE626 /* GoogleService-Info.plist in Resources */,
-				CA5F25A12C66C6FB000DE626 /* SheetViewController.xib in Resources */,
 				2DB8FA2128AD40FA00DF01CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,15 +385,16 @@
 			files = (
 				CA5F25C32C680B86000DE626 /* BirdDetailViewController.swift in Sources */,
 				CA5F25A82C66CBC2000DE626 /* BirdRepository.swift in Sources */,
-				CA5F25A02C66C6FB000DE626 /* SheetViewController.swift in Sources */,
 				CA5F25A62C66CB92000DE626 /* Bird.swift in Sources */,
 				CA5F25AD2C66CC1C000DE626 /* FirebaseBirdRepository.swift in Sources */,
 				CA002AAD2C6846C300B26949 /* Note.swift in Sources */,
+				CA1566A62C6C31770040C866 /* NoteRepository.swift in Sources */,
+				CA1566A32C6C1A110040C866 /* NoteViewModel.swift in Sources */,
 				CA5F259B2C66C5EC000DE626 /* Coordinator.swift in Sources */,
 				CA002AAB2C6843B700B26949 /* EmptyStateView.swift in Sources */,
+				CA1566A02C6C14E90040C866 /* AddNoteUseCase.swift in Sources */,
 				CA5F25B02C66CC70000DE626 /* BirdsViewModel.swift in Sources */,
 				CAC5C4102C65B174005C0902 /* MainViewController.swift in Sources */,
-				2DB8FA1C28AD40F900DF01CC /* ViewController.swift in Sources */,
 				CA5F25AB2C66CBEE000DE626 /* FetchBirdsUseCase.swift in Sources */,
 				CA5F259D2C66C600000DE626 /* MainCoordinator.swift in Sources */,
 				CA5F25B32C66CC9D000DE626 /* BirdCell.swift in Sources */,

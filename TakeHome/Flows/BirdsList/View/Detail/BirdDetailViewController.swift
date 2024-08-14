@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Combine
 import SDWebImage
 
 class BirdDetailViewController: UIViewController {
@@ -13,7 +14,12 @@ class BirdDetailViewController: UIViewController {
     // MARK: - Properties
     
     let bird: Bird
-    var notes: [String] = [] // This will store the list of community notes
+    var birdNotes: [Note] = []
+    
+    var viewModel: NoteViewModel!
+    
+    private var cancellables: Set<AnyCancellable> = []
+    private var tableViewHeightConstraint: NSLayoutConstraint?
     
     private let nameLabel: UILabel = {
         let label = UILabel()
@@ -45,7 +51,7 @@ class BirdDetailViewController: UIViewController {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "NoteCell")
         tableView.separatorStyle = .none
         tableView.rowHeight = UITableView.automaticDimension
-        tableView.estimatedRowHeight = 44.0
+        tableView.estimatedRowHeight = 50.0
         return tableView
     }()
     
@@ -64,15 +70,15 @@ class BirdDetailViewController: UIViewController {
         button.backgroundColor = .systemBlue
         button.setTitleColor(.white, for: .normal)
         button.titleLabel?.font = .systemFont(ofSize: 18, weight: .bold)
-        button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(addNoteTapped), for: .touchUpInside)
         return button
     }()
     
     // MARK: - Initializers
     
-    init(bird: Bird) {
+    init(bird: Bird, viewModel: NoteViewModel) {
         self.bird = bird
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -88,6 +94,7 @@ class BirdDetailViewController: UIViewController {
         
         setupViews()
         configure(with: bird)
+        bindViewModel()
     }
     
     // MARK: - Setup Methods
@@ -111,20 +118,31 @@ class BirdDetailViewController: UIViewController {
             stackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            stackView.bottomAnchor.constraint(equalTo: addButton.topAnchor, constant: -20)
+            stackView.bottomAnchor.constraint(lessThanOrEqualTo: addButton.topAnchor, constant: -20)
         ])
         
         // Set constraints for the add button
         addButton.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            addButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            addButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
-            addButton.heightAnchor.constraint(equalToConstant: 50)
+            addButton.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            addButton.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            addButton.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            addButton.heightAnchor.constraint(equalToConstant: 90)
         ])
         
         // Set constraints for the imageView to limit its height
         imageView.heightAnchor.constraint(equalToConstant: 200).isActive = true
+    }
+    
+    private func bindViewModel() {
+        viewModel.$birsSelected
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] bird in
+                guard let self = self else { return }
+                self.birdNotes = bird?.notes ?? []
+                self.updateNotesLabelAndTableView()
+            }
+            .store(in: &cancellables)
     }
     
     // MARK: - Configuration
@@ -132,11 +150,25 @@ class BirdDetailViewController: UIViewController {
     private func configure(with bird: Bird) {
         nameLabel.text = bird.nameEnglish
         imageView.sd_setImage(with: URL(string: bird.fullImageUrl), completed: nil)
+        birdNotes = bird.notes ?? []
         
-        // Load notes if any exist (this would usually come from a data source or API)
-        // Example notes added for demonstration
-        notes = ["I saw it last week in North Carolina!", "Beautiful bird!", "It's rare to spot these!"]
+        updateNotesLabelAndTableView()
+    }
+    
+    private func updateNotesLabelAndTableView() {
+        if birdNotes.isEmpty {
+            notesLabel.text = "No community notes available"
+            notesTableView.isHidden = true
+        } else {
+            notesLabel.text = "Community Notes"
+            notesTableView.isHidden = false
+            
+            let tableViewHeight = CGFloat(birdNotes.count) * notesTableView.estimatedRowHeight
+            notesTableView.heightAnchor.constraint(equalToConstant: tableViewHeight).isActive = true
+        }
+        
         notesTableView.reloadData()
+        notesTableView.layoutIfNeeded()
     }
     
     // MARK: - Actions
@@ -152,8 +184,9 @@ class BirdDetailViewController: UIViewController {
             guard let self = self, let noteText = alertController.textFields?.first?.text, !noteText.isEmpty else {
                 return
             }
-            self.notes.append(noteText)
-            self.notesTableView.reloadData()
+            
+            // Persist the note through the service
+            self.viewModel.addNote(content: noteText, userID: UUID().uuidString, birdSelected: self.bird)
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
@@ -162,20 +195,19 @@ class BirdDetailViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         present(alertController, animated: true, completion: nil)
-    }
-}
+    }}
 
 // MARK: - UITableViewDelegate, UITableViewDataSource
 
 extension BirdDetailViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return notes.count
+        return birdNotes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NoteCell", for: indexPath)
-        cell.textLabel?.text = notes[indexPath.row]
+        cell.textLabel?.text = birdNotes[indexPath.row].content
         cell.textLabel?.numberOfLines = 0
         cell.textLabel?.font = UIFont.systemFont(ofSize: 16)
         cell.backgroundColor = UIColor(white: 0.94, alpha: 1)

@@ -25,7 +25,12 @@ class MainCoordinator: Coordinator {
     }
     
     func presentBirdDetailSheet(for bird: Bird) {
-        let detailViewController = BirdDetailViewController(bird: bird)
+        let repository = NoteRepositoryImpl()
+        let useCase = AddNoteUseCaseImpl(repository: repository)
+        let viewModel = NoteViewModel(addNoteUseCase: useCase)
+        viewModel.birsSelected = bird
+        let detailViewController = BirdDetailViewController(bird: bird, viewModel: viewModel)
+        detailViewController.viewModel = viewModel
         detailViewController.modalPresentationStyle = .pageSheet
         navigationController.present(detailViewController, animated: true, completion: nil)
     }
